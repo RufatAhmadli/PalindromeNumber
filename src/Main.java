@@ -1,19 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        Solution solution=new Solution();
-        System.out.println(solution.isPalindrome(123));
+        Solution solution = new Solution();
+        System.out.println(solution.smallestEvenMultiple(122));
     }
+
     static class Solution {
-        public boolean isPalindrome(int x) {
-            if(x<0)return false;
-            long rev=0;
-            long copy=x;
-            while(x>0){
-                rev=rev*10+x%10;
-                x/=10;
-            }
-            if(rev==copy)return true;
-            return false;
+        public int smallestEvenMultiple(int n) {
+            if (n % 2 == 0) return n;
+            else return n * 2;
+
         }
     }
 }
