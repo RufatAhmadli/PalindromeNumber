@@ -1,13 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         Solution solution=new Solution();
-        System.out.println(solution.smallestEvenMultiple(122));
+        System.out.println(solution.fib(6));
     }
     static class Solution {
-        public int smallestEvenMultiple(int n) {
-            if(n%2==0)return n;
-            else return n*2;
-
+        public int fib(int n) {
+            if(n==0)return 0;
+            int a=0;
+            int b=1;
+            for(int i=2;i<=n;i++){
+                int copy=b;
+                b=b+a;
+                a=copy;
+            }
+            return b;
         }
     }
 }
